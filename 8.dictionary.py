@@ -31,4 +31,25 @@ student={'name':'nicky','branch':'cse','age':21}
 print(student.get('name'))
 print(student['branch'])
 print(student.values())
-
+print(student.items())
+#3.2 Dictionary Methods for Adding and Updating Data
+student={'name':'nicky','branch':'cse','age':21}
+print(student.update({"city":"AP"}))
+print(student.setdefault("city"))
+#3.3 Dictionary Methods for Removing Data
+student={'name':'nicky','branch':'cse','age':21}
+print(student.pop("age"))
+print(student.popitem())
+print(student.clear())
+#4. Built-in Functions for Dictionaries
+student={'name':'nicky','branch':'cse','age':21}
+print(len(student))
+print(max({1:'a',2:'b',3:'c'}))
+print(min({1:'a',2:'b',3:'c'}))
+print(sorted({1:'a',2:'b',3:'c'}))
+#5. Nested Dictionaries
+students = {
+"nicky": {"age": 21, "course": "python"},
+"anjali": {"age": 22, "course": "java"}
+}
+print(students["nicky"]["course"])
