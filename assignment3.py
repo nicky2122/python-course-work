@@ -97,7 +97,7 @@ questions = [
 
 
 
-def run_quiz(questions):
+def game_quiz(questions):
     score = 0
     for i, q in enumerate(questions, start=1):
         print(f"\nQuestion {i}: {q['question']}")
