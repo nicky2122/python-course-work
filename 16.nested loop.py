@@ -29,5 +29,12 @@ for row in range(5):
         print(" ",end=' ')
     for col1 in range(5-row):
         print("*",end=' ')    
-    print()                
+    print() 
+n=int(input("enet the number: "))
+for row in rang(n):
+    for col in range(n):
+        if row==0 or col==0 or row-1==0 or col-1==0
+        print("*",end=' ')
+    else:
+        print()                       
         
