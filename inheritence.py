@@ -1,43 +1,49 @@
-'''class status:
+class Status:
     def __init__(self,caption,image=None,video=None):
         self.caption=caption
         self.image=image
-        self.vide=video
+        self.video=video
         self.videolength=30
     def see_status(self):
         if self.video:
-           print(f"---{self.video}---\n'{self.caption}'")
+           print(f"---{self.video}---\n'{self.caption}")
         else:
-           print(f"---{self.image}---\n'{self.caption}'")
-class statusV1(status):
+           print(f"---{self.image}---\n'{self.caption}")
+class StatusV1(Status):
     def like(self):
         print("like")
     def addmusic(self,music):
         print(f"{music} music added")
-nicky=statusV1("hey i'm using whatsapp","goodmrg.png")
+nicky=StatusV1("hey i'm using whatsapp","goodmrg.png")
 nicky.see_status()
 nicky.like()
 nicky.addmusic("fear song")
-nicky=statusV1("good evening","cofee.png")
-nicky.see_status()
-nicky.like()
-nicky.addmusic("soft core")
+anjali=StatusV1("good evening","cofee.png")
+anjali.see_status()
+anjali.like()
+anjali.addmusic("soft core")
                                                                                                                                                     
     
 
-#types inheritence 
+#=============types inheritence=============== 
+
+#A-->B(SINGLE)
+#A-->B,C,D.....(hierchical)
+#A,B,C-->D(multiple)
+#A->B->C->D...(Multi level)
+
 #single inheritence
-class status:
+class Status:
     def uploadimage(self,imageurl):
         self.image=imageurl
         print(f"{self.image} is added to your status")
-class statusV1(status):
+class StatusV1(Status):
     def addcaption(self,text=None):
         self.caption=text
         print(f'"{self.caption}" is add to the status')
-nicky=status()
+nicky=Status()
 nicky.uploadimage('prabhas.png')
-anjali=statusV1()
+anjali=StatusV1()
 anjali.uploadimage('selif.png')
 anjali.addcaption('hii frds!!!')        
 
@@ -53,7 +59,7 @@ class statusV1(status):
         print(f'"{self.caption}" is add to the status')
 class statusV2(status):
     def like(self):
-        print(f'you can like status')        
+        print(f"you can like status")        
 nicky=status()
 nicky.uploadimage('prabhas.png')
 anjali=statusV1()
@@ -77,7 +83,8 @@ class statusV2(status):
     def like(self):
         print(f'you can like status')
 class statusV3(statusV1,statusV2):
-    def addmusic(self): 
+    def addmusic(self,music):
+        self.music=music 
         print(f'{self.music}...is ddded to yor status')               
 nicky=status()
 nicky.uploadimage('prabhas.png')
@@ -87,7 +94,7 @@ anjali.addcaption('hii frds!!!')
 moksha=statusV2()
 moksha.uploadimage('coffee.png')
 moksha.like()
-anusha=statusV3
+anusha=statusV3()
 anusha.uploadimage('tress.png')
 anusha.addcaption('no wifi')
 anusha.like()
@@ -107,7 +114,8 @@ class statusV2(status):
     def like(self):
         print(f'you can like status')
 class statusV3(statusV1,statusV2):
-    def addmusic(self): 
+    def addmusic(self,music):
+        self.music=music 
         print(f'{self.music}...is ddded to yor status') 
 class statusV4(statusV3):
     def videolenght(self,video):
@@ -122,19 +130,19 @@ anjali.addcaption('hii frds!!!')
 moksha=statusV2()
 moksha.uploadimage('coffee.png')
 moksha.like()
-anusha=statusV3
-anusha.uploadimage("mountains and trees.png")
+anusha=statusV3()
+anusha.uploadimage("trees.png")
 anusha.addcaption("no wifi")
 anusha.like()
 anusha.addmusic("radhesham.mp3")
-divya=statusV4
+divya=statusV4()
 divya.uploadimage("ram.png")
 divya.addcaption("i love nature")
 divya.like()
 divya.addmusic("ninne.mp3")
-divya.videolenght("somevideo.mp4")'''
+divya.videolenght("somevideo.mp4")
 
-'''#super methon in inheritence
+#super methon in inheritence
 class instagram:
     def __init__(self,username):
         self.username=username
@@ -172,7 +180,7 @@ nicky.uploadpost("good morning.png")
 anjali=instagramV1('anjali07','coder')  
 anjali.uploadpost("good morning","radhesham") 
 
-'''
+
 
 
 class instagram:

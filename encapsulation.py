@@ -1,8 +1,8 @@
 class details:
     def __init__(self,name,mail,password):
-        self.name=name
-        self._mail=mail
-        self.__password=password
+        self.name=name#public variable
+        self._mail=mail#protected variable
+        self.__password=password#private variable
     def getpassword(self):#use private methods
         return self.__password
     def setpassword(self,new_password):
@@ -15,8 +15,9 @@ print(nikhitha._mail)
 nikhitha._mail="anjali@gmail.com"
 print(nikhitha._mail)
 print(nikhitha.getpassword()) 
-nikhitha.setpassword("nicky@21")
-print(nikhitha.getpassword)
+nikhitha.setpassword("anjali@12")
+print(nikhitha.getpassword()) 
+
 
 
 
